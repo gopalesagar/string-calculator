@@ -8,6 +8,14 @@ describe('string-calculator.js => ', () => {
 
   describe('add function => ', () => {
 
+    it('should accept only string as input', () => {
+      const inputStringErrorMessage = 'Input must be a string!';
+      expect(() => add(123)).toThrow(inputStringErrorMessage);
+      expect(() => add([1, 2, 3])).toThrow(inputStringErrorMessage);
+      expect(() => add({})).toThrow(inputStringErrorMessage);
+      expect(() => add(null)).toThrow(inputStringErrorMessage);
+    });
+
     it('should return 0 for empty string input', () => {
       const sum = add('');
       expect(sum).toBe(0);
