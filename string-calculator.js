@@ -3,7 +3,13 @@ const add = (input) => {
 
   if(input === '') return 0;
 
-  return parseInt(input);
+  const DELIMITER = ',';
+  let sum = 0;
+  let numbers = input.split(DELIMITER).map(n => parseInt(n));
+
+  sum = numbers.reduce((sum, n) => sum + n, sum);
+
+  return sum;
 };
 
 module.exports = { add };
