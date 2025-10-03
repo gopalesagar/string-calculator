@@ -47,5 +47,9 @@ describe('string-calculator.js => ', () => {
     it('should throw error if negative numbers are passed in input', () => {
       expect(() => add('//;\n1;-2;-5;5')).toThrow('negative numbers not allowed -2,-5');
     });
+
+    it('should ignore numbers bigger than 1000', () => {
+      expect(add('//###\n1###2000###3###1000')).toBe(4);
+    });
   });
 });
