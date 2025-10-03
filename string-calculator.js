@@ -14,7 +14,7 @@ const add = (input) => {
   }
   let numbers = input.split(DELIMITER_REGEX).map(n => parseInt(n));
 
-  const negatives = numbers.map(n => n < 0);
+  const negatives = numbers.filter(n => n < 0);
   if(negatives && negatives.length > 0) {
     throw new Error(`negative numbers not allowed ${negatives.join(',')}`);
   }
