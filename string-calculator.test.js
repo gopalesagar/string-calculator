@@ -23,5 +23,9 @@ describe('string-calculator.js => ', () => {
     it('should return same number for single number input', () => {
       expect(add('3')).toBe(3);
     });
+
+    it('should return sum for 2 numbers', () => {
+      expect(add('1,5')).toBe(6);
+    });
   });
 });
