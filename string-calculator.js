@@ -3,8 +3,15 @@ const add = (input) => {
 
   if(input === '') return 0;
 
-  const DELIMITER_REGEX = /,|\n/;
+  let DELIMITER_REGEX = /,|\n/;
   let sum = 0;
+
+  if (input.startsWith('//')) {
+    const delimiterEndIndex = input.indexOf('\n');
+    const delimiter = input.substring(2, delimiterEndIndex);
+    input = input.substring(delimiterEndIndex + 1);
+    DELIMITER_REGEX = new RegExp(delimiter);
+  }
   let numbers = input.split(DELIMITER_REGEX).map(n => parseInt(n));
 
   sum = numbers.reduce((sum, n) => sum + n, sum);
