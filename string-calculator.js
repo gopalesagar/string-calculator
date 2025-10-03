@@ -3,9 +3,9 @@ const add = (input) => {
 
   if(input === '') return 0;
 
-  const DELIMITER = ',';
+  const DELIMITER_REGEX = /,|\n/;
   let sum = 0;
-  let numbers = input.split(DELIMITER).map(n => parseInt(n));
+  let numbers = input.split(DELIMITER_REGEX).map(n => parseInt(n));
 
   sum = numbers.reduce((sum, n) => sum + n, sum);
 
