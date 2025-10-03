@@ -31,5 +31,9 @@ describe('string-calculator.js => ', () => {
     it('should support newline instead of comma for delimeter', () => {
       expect(add('1\n2,3')).toBe(6);
     });
+
+    it('should support delimiter change with the format `//[delimiter]\n[numbers…]`', () => {
+      expect(add('//;\n1;2')).toBe(3);
+    });
   });
 });
