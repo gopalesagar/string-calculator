@@ -36,8 +36,12 @@ describe('string-calculator.js => ', () => {
       expect(add('//;\n1;2')).toBe(3);
     });
 
-    it('should throw error if negative numbers are passed in input', () => {
+    it('should throw error if negative number is passed in input', () => {
       expect(() => add('//;\n1;-2')).toThrow('negative numbers not allowed -2');
+    });
+
+    it('should throw error if negative numbers are passed in input', () => {
+      expect(() => add('//;\n1;-2;-5;5')).toThrow('negative numbers not allowed -2,-5');
     });
   });
 });
