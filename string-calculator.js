@@ -19,6 +19,8 @@ const add = (input) => {
     throw new Error(`negative numbers not allowed ${negatives.join(',')}`);
   }
 
+  numbers = numbers.filter(n => n <= 1000);
+
   sum = numbers.reduce((sum, n) => sum + n, sum);
 
   return sum;

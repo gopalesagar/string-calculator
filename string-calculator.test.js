@@ -41,7 +41,7 @@ describe('string-calculator.js => ', () => {
     });
 
     it('should accept new delimeter of length more than 1', () => {
-      expect(add('//###\n1###2000###3###1000')).toBe(3004);
+      expect(add('//###\n1###2000###3###1000')).toBe(1004);
     });
 
     it('should throw error if negative numbers are passed in input', () => {
