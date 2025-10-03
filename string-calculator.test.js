@@ -21,7 +21,7 @@ describe('string-calculator.js => ', () => {
     });
 
     it('should return same number for single number input', () => {
-      expect(add('1')).toBe(1);
+      expect(add('3')).toBe(3);
     });
   });
 });
