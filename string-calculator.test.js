@@ -49,7 +49,7 @@ describe('string-calculator.js => ', () => {
     });
 
     it('should ignore numbers bigger than 1000', () => {
-      expect(add('//###\n1###2000###3###1000')).toBe('1004');
+      expect(add('//###\n1###2000###3###1000')).toBe(1004);
     });
   });
 });
