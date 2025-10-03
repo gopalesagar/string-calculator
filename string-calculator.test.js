@@ -17,8 +17,11 @@ describe('string-calculator.js => ', () => {
     });
 
     it('should return 0 for empty string input', () => {
-      const sum = add('');
-      expect(sum).toBe(0);
+      expect(add('')).toBe(0);
+    });
+
+    it('should return same number for single number input', () => {
+      expect(add('1')).toBe(1);
     });
   });
 });
