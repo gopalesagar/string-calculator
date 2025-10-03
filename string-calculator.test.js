@@ -51,5 +51,9 @@ describe('string-calculator.js => ', () => {
     it('should ignore numbers bigger than 1000', () => {
       expect(add('//###\n1###2000###3###1000')).toBe(1004);
     });
+
+    it('delimiter will be enclosed by square brackets', () => {
+      expect(add('//[###]\n1###4###5###5')).toBe(15);
+    });
   });
 });
