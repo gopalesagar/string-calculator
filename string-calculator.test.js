@@ -35,5 +35,9 @@ describe('string-calculator.js => ', () => {
     it('should support delimiter change with the format `//[delimiter]\n[numbers…]`', () => {
       expect(add('//;\n1;2')).toBe(3);
     });
+
+    it('should throw error if negative numbers are passed in input', () => {
+      expect(() => add('//;\n1;-2')).toThrow('negative numbers not allowed -2');
+    });
   });
 });
