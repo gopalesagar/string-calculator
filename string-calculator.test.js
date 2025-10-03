@@ -5,4 +5,12 @@ describe('string-calculator.js => ', () => {
     expect(add).toBeDefined();
     expect(typeof add).toBe('function');
   });
+
+  describe('add function => ', () => {
+
+    it('should return 0 for empty string input', () => {
+      const sum = add('');
+      expect(sum).toBe(0);
+    });
+  });
 });
